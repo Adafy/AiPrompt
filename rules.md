@@ -59,11 +59,17 @@ When project backend is a Web API, follow these rules:
 
 ### Implementation Logs
 - **Always create** `.md` file in [`/implementations`](implementations/) folder after each task
+  - **File naming:** Start filename with Jira ticket number when available (e.g., `JIRA-123-feature-description.md`)
+  - **If no Jira ticket:** Use 5-digit incremented number (e.g., `00001-task-description.md`, `00002-bug-fix.md`)
 - **Add tags/keywords** at file beginning for quick relevance identification
 - **Skip logging** only for minimal changes
   - *Definition:* Changes affecting fewer than 10 lines of code or simple UI adjustments (text, colors, spacing) that don't alter business logic
 - **Read previous logs** before starting new tasks - use filenames and tags to select relevant documents
 - **Keep task log updated** when implementation proceeds, if one exists
+- **Consolidate implementation logs** when finalizing larger developments (stories or similar)
+  - **Consolidated file placement:** Place in [`/implementations`](implementations/) folder
+  - **Consolidated file naming:** Start with Jira ticket number (e.g., `JIRA-456-story-consolidation.md`)
+  - **Content requirements:** Include brief description of overall story/development and consolidate all related implementation logs from that development cycle
 
 ### Log Structure
 ```markdown
