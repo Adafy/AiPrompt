@@ -58,9 +58,12 @@ When project backend is a Web API, follow these rules:
 ## Documentation & Logging
 
 ### Implementation Logs
+- **File naming:** Start filename with Jira ticket number when available 
+  - `JIRA-123-task-description.md` for single tasks
+  - `JIRA-123-story-description.md` for final, story-level log file
+  - Try to find the Jira ticket number from the current branch name in Terminal
+  - **If no Jira ticket:** Use 5-digit incremented number (e.g., `00001-task-description.md`, 
 - **Always create** `.md` file in [`/implementations`](implementations/) folder after each task
-  - **File naming:** Start filename with Jira ticket number when available (e.g., `JIRA-123-feature-description.md`)
-  - **If no Jira ticket:** Use 5-digit incremented number (e.g., `00001-task-description.md`, `00002-bug-fix.md`)
 - **Add tags/keywords** at file beginning for quick relevance identification
 - **Skip logging** only for minimal changes
   - *Definition:* Changes affecting fewer than 10 lines of code or simple UI adjustments (text, colors, spacing) that don't alter business logic
@@ -69,7 +72,11 @@ When project backend is a Web API, follow these rules:
 - **Consolidate implementation logs** when finalizing larger developments (stories or similar)
   - **Consolidated file placement:** Place in [`/implementations`](implementations/) folder
   - **Consolidated file naming:** Start with Jira ticket number (e.g., `JIRA-456-story-consolidation.md`)
-  - **Content requirements:** Include brief description of overall story/development and consolidate all related implementation logs from that development cycle
+  - **Content requirements:** 
+    - Include brief description of overall story/development and consolidate all related implementation logs from that development cycle
+    - If Jira ticket is available, add a link to the ticket after the heading of the document. The URL of the ticket is in format https://adafy.atlassian.net/browse/PRJ-123, where PRJ-123 is the Jira ticket number
+    - Follow naming convention defined for task specific log files
+  - **Remove task log files after consolidation**
 
 ### Log Structure
 ```markdown
